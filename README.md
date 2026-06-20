@@ -5,6 +5,8 @@ A stunning interactive 3D portfolio built with **Next.js**, **React Three Fiber*
 ##  Live Portfolio
 Visit portfolio at: **https://lokesh-poreddy.github.io/**
 
+Static HTML preview (served by GitHub Pages): https://lokesh-poreddy.github.io/index.html
+
 ##  AWS Badges & Certifications
 
 ### 3D Interactive Badges:
