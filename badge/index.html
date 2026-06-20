@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>AWS Badges — 3D Curved Rim</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #0d1117; }
+
+  .badges-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    justify-items: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: radial-gradient(ellipse at center, #1a2230 0%, #0d1117 70%);
+  }
+
+  .badge-scene {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 900px;
+    perspective-origin: 50% 50%;
+  }
+
+    .badge-stage {
+      width: 200px;
+      height: 232px;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateX(-6deg);
+    }
+
+    .badge-wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: spin 6s linear infinite;
+      will-change: transform;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotateY(0deg); }
+      100% { transform: rotateY(360deg); }
+    }
+
+    .badge-face {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .badge-front { transform: translateZ(12px); }
+    .badge-back  { transform: rotateY(180deg) translateZ(12px); }
+
+    .rim-slice {
+      position: absolute;
+      inset: 0;
+      width: 80%;
+      height: 100%;
+      backface-visibility: visible;
+    }
+
+    .rim-shine {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      transform: translateZ(12.5px);
+      background: linear-gradient(
+        105deg,
+        transparent 35%,
+        rgba(255,255,255,0.45) 48%,
+        rgba(255,255,255,0.85) 50%,
+        rgba(255,255,255,0.45) 52%,
+        transparent 65%
+      );
+      mix-blend-mode: screen;
+      opacity: 0.0;
+      animation: shineSweep 6s linear infinite;
+      clip-path: path('M100 2 C100 2 186 48 191 55 Q200 65 200 116 Q200 167 191 177 C186 184 100 230 100 230 C100 230 14 184 9 177 Q0 167 0 116 Q0 65 9 55 C14 48 100 2 100 2 Z');
+    }
+
+    @keyframes shineSweep {
+      0%, 20%   { opacity: 0; transform: translateZ(12.5px) translateX(-60%); }
+      25%       { opacity: 0.9; }
+      35%       { opacity: 0; transform: translateZ(12.5px) translateX(60%); }
+      100%      { opacity: 0; transform: translateZ(12.5px) translateX(60%); }
+    }
+
+  .badge-stage {
+    width: 200px;
+    height: 232px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-6deg);
+  }
+
+  .badge-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spin 6s linear infinite;
+    will-change: transform;
+  }
+
+  @keyframes spin {
+    0%   { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+  }
+
+  .badge-face {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .badge-front { transform: translateZ(12px); }
+  .badge-back  { transform: rotateY(180deg) translateZ(12px); }
+
+  .rim-slice {
+    position: absolute;
+    inset: 0;
+    width: 80%;
+    height: 100%;
+    backface-visibility: visible;
+  }
+
+  .badge-stage::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    width: 180px;
+    height: 30px;
+    transform: translateX(-50%);
+    background: radial-gradient(ellipse, rgba(120,160,220,0.25) 0%, transparent 70%);
+    filter: blur(8px);
+    z-index: -1;
+  }
+
+  .badge-label {
+    text-align: center;
+    color: #58a6ff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 900px) {
+    .badges-container {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="badges-container">
+  <!-- Badge 1: Machine Learning Engineer -->
+  <div>
+    <div class="badge-scene">
+      <div class="badge-stage">
+        <div class="badge-wrapper">
+          <div class="rim-slice" style="transform: translateZ(-12px) scale(0.992);">
+            <svg viewBox="0 0 200 232" width="200" height="232" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="rim-12-mle" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%"  stop-color="#3a3a3a"/>
+                  <stop offset="25%" stop-color="#9a9a9a"/>
+                  <stop offset="50%" stop-color="#e8e8e8"/>
+                  <stop offset="75%" stop-color="#9a9a9a"/>
+                  <stop offset="100%" stop-color="#3a3a3a"/>
+                </linearGradient>
+              </defs>
+              <path d="M100 2 C100 2 186 48 191 55 Q200 65 200 116 Q200 167 191 177 C186 184 100 230 100 230 C100 230 14 184 9 177 Q0 167 0 116 Q0 65 9 55 C14 48 100 2 100 2 Z" fill="url(#rim-12-mle)"/>
+            </svg>
+          </div>
+
+          <div class="rim-slice" style="transform: translateZ(0px) scale(1.007);">
+            <svg viewBox="0 0 200 232" width="200" height="232" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="rim0-mle" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%"   stop-color="#5a5a5a"/>
+                  <stop offset="20%"  stop-color="#b0b0b0"/>
+                  <stop offset="40%"  stop-color="#f4f4f4"/>
+                  <stop offset="50%"  stop-color="#ffffff"/>
+                  <stop offset="60%"  stop-color="#f4f4f4"/>
+                  <stop offset="80%"  stop-color="#b0b0b0"/>
+                  <stop offset="100%" stop-color="#5a5a5a"/>
+                </linearGradient>
+              </defs>
+              <path d="M100 2 C100 2 186 48 191 55 Q200 65 200 116 Q200 167 191 177 C186 184 100 230 100 230 C100 230 14 184 9 177 Q0 167 0 116 Q0 65 9 55 C14 48 100 2 100 2 Z" fill="url(#rim0-mle)"/>
+            </svg>
+          </div>
+
+          <div class="badge-face badge-front">
+            <svg viewBox="0 0 200 232" xmlns="http://www.w3.org/2000/svg" width="200" height="232">
+              <defs>
+                <linearGradient id="hexGradFront-mle" x1="0.15" y1="0" x2="0.85" y2="1">
+                  <stop offset="0%"   stop-color="#6B9EFF"/>
+                  <stop offset="45%"  stop-color="#3A3DB8"/>
+                  <stop offset="100%" stop-color="#1A1A7A"/>
+                </linearGradient>
+                <linearGradient id="borderGradFront-mle" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%"   stop-color="#cfd4dc"/>
+                  <stop offset="50%"  stop-color="#8a8f96"/>
+                  <stop offset="100%" stop-color="#3f4248"/>
+                </linearGradient>
+              </defs>
+              <path d="M100 2 C100 2 186 48 191 55 Q200 65 200 116 Q200 167 191 177 C186 184 100 230 100 230 C100 230 14 184 9 177 Q0 167 0 116 Q0 65 9 55 C14 48 100 2 100 2 Z" fill="url(#borderGradFront-mle)"/>
+              <path d="M100 14 C100 14 180 57 184 63 Q192 72 192 116 Q192 160 184 169 C180 175 100 218 100 218 C100 218 20 175 16 169 Q8 160 8 116 Q8 72 16 63 C20 57 100 14 100 14 Z" fill="url(#hexGradFront-mle)"/>
+              <text x="98" y="66" font-family="Arial,sans-serif" font-size="16" font-weight="800" fill="white" text-anchor="middle" letter-spacing="1">aws</text>
+              <rect x="119" y="52" width="18" height="18" rx="4" fill="#E8941A"/>
+              <text x="128" y="65" font-family="Arial,sans-serif" font-size="8" font-weight="400" fill="white" text-anchor="middle">✓</text>
+              <text x="100" y="83" font-family="Arial,sans-serif" font-size="12" fill="#B8CFFF" text-anchor="middle" letter-spacing="1.5">certified</text>
+              <line x1="46" y1="95" x2="154" y2="95" stroke="rgba(255,255,255,0.3)" stroke-width="0.9"/>
+              <text x="100" y="120" font-family="Arial,sans-serif" font-size="16" font-weight="800" fill="white" text-anchor="middle">Machine</text>
+              <text x="100" y="138" font-family="Arial,sans-serif" font-size="16" font-weight="800" fill="white" text-anchor="middle">Learning</text>
+              <text x="100" y="158" font-family="Arial,sans-serif" font-size="16" font-weight="800" fill="white" text-anchor="middle">Engineer</text>
+              <line x1="46" y1="170" x2="154" y2="170" stroke="rgba(255,255,255,0.3)" stroke-width="0.9"/>
+              <text x="100" y="188" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#B8CFFF" text-anchor="middle" letter-spacing="4">ASSOCIATE</text>
+            </svg>
+          </div>
+
+          <div class="badge-face badge-back">
+            <svg viewBox="0 0 200 232" xmlns="http://www.w3.org/2000/svg" width="200" height="232">
+              <defs>
+                <linearGradient id="hexGradBack-mle" x1="0.85" y1="0" x2="0.15" y2="1">
+                  <stop offset="0%"   stop-color="#1A1A7A"/>
+                  <stop offset="55%"  stop-color="#3A3DB8"/>
+                  <stop offset="100%" stop-color="#6B9EFF"/>
+                </linearGradient>
+              </defs>
+              <path d="M100 2 C100 2 186 48 191 55 Q200 65 200 116 Q200 167 191 177 C186 184 100 230 100 230 C100 230 14 184 9 177 Q0 167 0 116 Q0 65 9 55 C14 48 100 2 100 2 Z" fill="url(#hexGradBack-mle)"/>
+              <text x="100" y="122" font-family="Georgia,'Times New Roman',serif" font-size="60" font-weight="700" fill="white" text-anchor="middle" dominant-baseline="middle" letter-spacing="5">PLR</text>
+              <line x1="50" y1="150" x2="150" y2="150" stroke="rgba(255,255,255,0.25)" stroke-width="0.9"/>
+              <text x="100" y="172" font-family="Arial,sans-serif" font-size="9.5" fill="rgba(184,207,255,0.75)" text-anchor="middle" letter-spacing="2.5">AWS CERTIFIED</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="badge-label">AWS Machine Learning Engineer — Associate</div>
+  </div>
+
+  <!-- Badge 2: AI Practitioner -->
+  <div>
+    <div class="badge-scene">
+      <div class="badge-stage">
+        <div class="badge-wrapper">
+          <div class="rim-slice" style="transform: translateZ(-12px) scale(0.992);">
+            <svg viewBox="0 0 200 232" width="200" height="232" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="rim-12-ai" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%"  stop-color="#3a3a3a"/>
+                  <stop offset="25%" stop-color="#9a9a9a"/>
+                  <stop offset="50%" stop-color="#e8e8e8"/>
+                  <stop offset="75%" stop-color="#9a9a9a"/>
+                  <stop offset="100%" stop-color="#3a3a3a"/>
+                </linearGradient>
+              </defs>
+              <path d="M100 2 C100 2 186 48 191 55 Q200 65 200 116 Q200 167 191 177 C186 184 100 230 100 230 C100 230 14 184 9 177 Q0 167 0 116 Q0 65 9 55 C14 48 100 2 100 2 Z" fill="url(#rim-12-ai)"/>
+            </svg>
+          </div>
+
+          <div class="rim-slice" style="transform: translateZ(0px) scale(1.007);">
+            <svg viewBox="0 0 200 232" width="200" height="232" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="rim0-ai" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%"   stop-color="#5a5a5a"/>
+                  <stop offset="20%"  stop-color="#b0b0b0"/>
+                  <stop offset="40%"  stop-color="#f4f4f4"/>
+                  <stop offset="50%"  stop-color="#ffffff"/>
+                  <stop offset="60%"  stop-color="#f4f4f4"/>
+                  <stop offset="80%"  stop-color="#b0b0b0"/>
+                  <stop offset="100%" stop-color="#5a5a5a"/>
+                </linearGradient>
+              </defs>
+              <path d="M100 2 C100 2 186 48 191 55 Q200 65 200 116 Q200 167 191 177 C186 184 100 230 100 230 C100 230 14 184 9 177 Q0 167 0 116 Q0 65 9 55 C14 48 100 2 100 2 Z" fill="url(#rim0-ai)"/>
+            </svg>
+          </div>
+
+          <div class="badge-face badge-front">
+            <svg viewBox="0 0 200 232" xmlns="http://www.w3.org/2000/svg" width="200" height="232">
+              <defs>
+                <linearGradient id="hexGradFront-ai" x1="0.15" y1="0" x2="0.85" y2="1">
+                  <stop offset="0%"   stop-color="#4d5966"/>
+                  <stop offset="45%"  stop-color="#2a333d"/>
+                  <stop offset="100%" stop-color="#1b2128"/>
+                </linearGradient>
+                <linearGradient id="borderGradFront-ai" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%"   stop-color="#cfd4dc"/>
+                  <stop offset="50%"  stop-color="#8a8f96"/>
+                  <stop offset="100%" stop-color="#3f4248"/>
+                </linearGradient>
+              </defs>
+              <path d="M100 2 C100 2 186 48 191 55 Q200 65 200 116 Q200 167 191 177 C186 184 100 230 100 230 C100 230 14 184 9 177 Q0 167 0 116 Q0 65 9 55 C14 48 100 2 100 2 Z" fill="url(#borderGradFront-ai)"/>
+              <path d="M100 14 C100 14 180 57 184 63 Q192 72 192 116 Q192 160 184 169 C180 175 100 218 100 218 C100 218 20 175 16 169 Q8 160 8 116 Q8 72 16 63 C20 57 100 14 100 14 Z" fill="url(#hexGradFront-ai)"/>
+              <text x="86" y="58" font-family="Arial,sans-serif" font-size="22" font-weight="800" fill="white" text-anchor="middle" letter-spacing="0.5">aws</text>
+              <rect x="114" y="44" width="16" height="16" rx="2" fill="#F99B15" transform="rotate(45 122 52)"/>
+              <text x="122" y="56" font-family="Arial,sans-serif" font-size="12" font-weight="900" fill="white" text-anchor="middle">✓</text>
+              <text x="100" y="78" font-family="Arial,sans-serif" font-size="16" fill="white" text-anchor="middle" letter-spacing="0.5">certified</text>
+              <line x1="56" y1="92" x2="144" y2="92" stroke="white" stroke-width="1"/>
+              <text x="100" y="130" font-family="Arial,sans-serif" font-size="32" font-weight="900" fill="white" text-anchor="middle">AI</text>
+              <text x="100" y="158" font-family="Arial,sans-serif" font-size="24" font-weight="900" fill="white" text-anchor="middle">Practitioner</text>
+              <line x1="56" y1="174" x2="144" y2="174" stroke="white" stroke-width="1"/>
+              <text x="100" y="196" font-family="Arial,sans-serif" font-size="12" font-weight="800" fill="white" text-anchor="middle" letter-spacing="3.5">FOUNDATIONAL</text>
+            </svg>
+          </div>
+
+          <div class="badge-face badge-back">
+            <svg viewBox="0 0 200 232" xmlns="http://www.w3.org/2000/svg" width="200" height="232">
+              <defs>
+                <linearGradient id="hexGradBack-ai" x1="0.85" y1="0" x2="0.15" y2="1">
+                  <stop offset="0%"   stop-color="#1b2128"/>
+                  <stop offset="55%"  stop-color="#2a333d"/>
+                  <stop offset="100%" stop-color="#4d5966"/>
+                </linearGradient>
+              </defs>
+              <path d="M100 2 C100 2 186 48 191 55 Q200 65 200 116 Q200 167 191 177 C186 184 100 230 100 230 C100 230 14 184 9 177 Q0 167 0 116 Q0 65 9 55 C14 48 100 2 100 2 Z" fill="url(#hexGradBack-ai)"/>
+              <text x="100" y="122" font-family="Arial,sans-serif" font-size="50" font-weight="900" fill="white" text-anchor="middle" dominant-baseline="middle" letter-spacing="4">PLR</text>
+              <line x1="50" y1="150" x2="150" y2="150" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+              <text x="100" y="172" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.8)" text-anchor="middle" letter-spacing="2.5">AWS CERTIFIED</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="badge-label">AWS AI Practitioner — Foundational</div>
+  </div>
+</div>
+
+</body>
+</html>
