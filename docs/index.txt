@@ -1,0 +1,249 @@
+1:"$Sreact.fragment"
+2:I[5558,["177","static/chunks/app/layout-3f44a2e21daff7f4.js"],"ThemeProvider"]
+3:I[5392,[],""]
+4:I[534,[],""]
+5:I[4646,["852","static/chunks/852-16193f80ef1bec78.js","974","static/chunks/app/page-7469b49651e823f5.js"],"default"]
+6:I[511,["852","static/chunks/852-16193f80ef1bec78.js","974","static/chunks/app/page-7469b49651e823f5.js"],"default"]
+7:I[8104,["852","static/chunks/852-16193f80ef1bec78.js","974","static/chunks/app/page-7469b49651e823f5.js"],"default"]
+8:I[6870,["852","static/chunks/852-16193f80ef1bec78.js","974","static/chunks/app/page-7469b49651e823f5.js"],"default"]
+9:I[2133,["852","static/chunks/852-16193f80ef1bec78.js","974","static/chunks/app/page-7469b49651e823f5.js"],"default"]
+a:I[1239,["852","static/chunks/852-16193f80ef1bec78.js","974","static/chunks/app/page-7469b49651e823f5.js"],"default"]
+10:I[7948,[],""]
+:HL["/_next/static/media/13971731025ec697-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/36966cca54120369-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/eb7ae2c54a3d8388.css","style"]
+:HL["/_next/static/css/cd000fea656fc575.css","style"]
+b:T2064,
+        #fun-animation {
+          background: transparent;
+        }
+
+        .fun-scene {
+          position: relative;
+          width: 100%;
+          max-width: 840px;
+          height: 420px;
+          background: linear-gradient(to bottom, #1a1a2e 0%, #000 100%);
+          border: 2px solid rgba(255, 255, 255, 0.08);
+          overflow: hidden;
+          border-radius: 24px;
+          animation: fun-screen-shake 6s infinite;
+          box-shadow: 0 0 80px rgba(0, 0, 0, 0.4);
+        }
+
+        .fun-character {
+          position: absolute;
+          bottom: 58px;
+          width: 120px;
+          height: 150px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .naruto-wrapper { left: 48px; animation: rush-right 6s ease-in-out infinite; }
+        .sasuke-wrapper { right: 48px; animation: rush-left 6s ease-in-out infinite; }
+
+        .pixel-body { display: flex; flex-direction: column; align-items: center; position: relative; }
+        .pixel-head { width: 45px; height: 40px; background: #ffcc80; position: relative; z-index: 3; }
+        .naruto-hair { border-top: 15px solid #ffb300; }
+        .sasuke-hair { border-top: 15px solid #1a237e; }
+
+        .pixel-head::after { content: ''; position: absolute; top: 12px; width: 6px; height: 6px; background: #000; }
+        .naruto-wrapper .pixel-head::after { right: 8px; box-shadow: -15px 0 0 #000; }
+        .sasuke-wrapper .pixel-head::after { left: 8px; box-shadow: 15px 0 0 #000; }
+
+        .pixel-mid { display: flex; justify-content: center; margin-top: -2px; z-index: 2; }
+        .pixel-torso { width: 35px; height: 40px; }
+        .naruto-torso { background: #fb8c00; border-bottom: 12px solid #1e88e5; }
+        .sasuke-torso { background: #9e9e9e; border-bottom: 12px solid #1a237e; }
+
+        .pixel-arm { width: 15px; height: 35px; margin-top: 5px; }
+        .naruto-arm { background: #fb8c00; }
+        .sasuke-arm { background: #e0e0e0; }
+
+        .strike-arm { position: relative; z-index: 4; transform: translateY(-5px); }
+        .naruto-wrapper .strike-arm { transform: translateY(-5px) translateX(5px) rotate(-15deg); }
+        .sasuke-wrapper .strike-arm { transform: translateY(-5px) translateX(-5px) rotate(15deg); }
+
+        .pixel-legs { display: flex; justify-content: space-between; width: 35px; margin-top: -2px; z-index: 1; }
+        .pixel-leg { width: 14px; height: 25px; border-bottom: 10px solid #5d4037; }
+        .naruto-leg { background: #1e88e5; }
+        .sasuke-leg { background: #1a237e; }
+
+        .rasengan {
+          position: absolute;
+          right: -20px;
+          top: 50px;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          background: radial-gradient(circle, #fff 10%, #4db8ff 40%, transparent 80%);
+          box-shadow: 0 0 20px #4db8ff, 0 0 40px #4db8ff, inset 0 0 20px #fff;
+          animation: fun-spin 0.2s linear infinite, fun-jutsu-grow 6s infinite;
+          z-index: 5;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .rasengan::before {
+          content: '';
+          position: absolute;
+          top: -10%;
+          left: -10%;
+          width: 120%;
+          height: 120%;
+          border-radius: 50%;
+          border: 4px solid transparent;
+          border-top-color: rgba(255, 255, 255, 0.9);
+          border-bottom-color: rgba(135, 206, 235, 0.7);
+          animation: fun-spin-ring 0.3s linear infinite;
+        }
+
+        .wind-suction {
+          position: absolute;
+          width: 200%;
+          height: 200%;
+          border-radius: 50%;
+          border: 2px dashed rgba(255, 255, 255, 0.6);
+          animation: fun-suck-wind 0.6s linear infinite;
+        }
+
+        .wind-suction:nth-child(2) {
+          width: 250%;
+          height: 250%;
+          border: 1px dashed rgba(173, 216, 230, 0.4);
+          animation: fun-suck-wind 0.4s linear infinite reverse;
+        }
+
+        .chidori {
+          position: absolute;
+          left: -20px;
+          top: 50px;
+          width: 60px;
+          height: 60px;
+          background: #e0f7ff;
+          border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+          box-shadow: 0 0 15px #fff, 0 0 30px #7b61ff, 0 0 50px #00d4ff;
+          animation: fun-flicker 0.05s infinite, fun-jutsu-grow 6s infinite;
+          z-index: 5;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .lightning-sparks {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          animation: fun-zap 0.1s infinite alternate;
+        }
+
+        .lightning-sparks::before,
+        .lightning-sparks::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          animation: fun-crackle 0.08s infinite;
+        }
+
+        .lightning-sparks::after {
+          animation-duration: 0.12s;
+          animation-direction: reverse;
+        }
+
+        .impact-flash {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) scale(0);
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          background: radial-gradient(circle, #fff 20%, #a881ff 50%, #4db8ff 80%, transparent 100%);
+          box-shadow: 0 0 100px #fff, 0 0 300px #a881ff;
+          opacity: 0;
+          mix-blend-mode: screen;
+          z-index: 10;
+          animation: fun-explosion 6s infinite;
+        }
+
+        @keyframes rush-right {
+          0%, 20% { transform: translateX(0); }
+          30%, 40% { transform: translateX(240px); }
+          80% { transform: translateX(240px); opacity: 0; }
+          90%, 100% { transform: translateX(0); opacity: 0; }
+        }
+
+        @keyframes rush-left {
+          0%, 20% { transform: translateX(0); }
+          30%, 40% { transform: translateX(-240px); }
+          80% { transform: translateX(-240px); opacity: 0; }
+          90%, 100% { transform: translateX(0); opacity: 0; }
+        }
+
+        @keyframes fun-explosion {
+          0%, 29% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+          30% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+          35% { transform: translate(-50%, -50%) scale(3); opacity: 1; }
+          40%, 70% { transform: translate(-50%, -50%) scale(3.5); opacity: 0.9; }
+          80%, 100% { transform: translate(-50%, -50%) scale(5); opacity: 0; }
+        }
+
+        @keyframes fun-jutsu-grow {
+          0%, 25% { transform: scale(1); }
+          30%, 60% { transform: scale(2.2); }
+          80%, 100% { transform: scale(0); }
+        }
+
+        @keyframes fun-screen-shake {
+          0%, 29% { transform: translate(0, 0); }
+          30%, 50% { transform: translate(4px, 4px); }
+          31%, 51% { transform: translate(-4px, -3px); }
+          32%, 52% { transform: translate(-4px, 3px); }
+          33%, 53% { transform: translate(4px, -3px); }
+          54%, 100% { transform: translate(0, 0); }
+        }
+
+        @keyframes fun-spin { 100% { transform: rotate(360deg); } }
+        @keyframes fun-spin-ring { 100% { transform: rotate(360deg) scale(1.1); } }
+
+        @keyframes fun-suck-wind {
+          0% { transform: scale(1.5) rotate(0deg); opacity: 0; }
+          20% { opacity: 1; }
+          80% { opacity: 1; }
+          100% { transform: scale(0.2) rotate(180deg); opacity: 0; }
+        }
+
+        @keyframes fun-flicker {
+          0% { transform: scale(2); opacity: 1; }
+          50% { transform: scale(1.3) rotate(10deg); opacity: 0.9; }
+          100% { transform: scale(0.4) rotate(-15deg); opacity: 1; }
+        }
+
+        @keyframes fun-zap { 0% { transform: rotate(0deg); } 100% { transform: rotate(45deg) scale(1.1); } }
+        @keyframes fun-crackle {
+          0% { box-shadow: -15px -20px 0 -25px #fff, 25px 15px 0 -25px #00d4ff; }
+          25% { box-shadow: 20px -25px 0 -25px #7b61ff, -20px 20px 0 -25px #fff; }
+          50% { box-shadow: -25px 10px 0 -25px #00d4ff, 15px 25px 0 -25px #fff; }
+          75% { box-shadow: 30px -10px 0 -25px #fff, -10px -30px 0 -25px #7b61ff; }
+          100% { box-shadow: -20px -15px 0 -25px #00d4ff, 25px 20px 0 -25px #fff; }
+        }
+      0:{"P":null,"b":"nhng8vlpfw9JUaMmil-TP","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/eb7ae2c54a3d8388.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/cd000fea656fc575.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":["$","style",null,{"children":"\nhtml {\n  font-family: 'DM Sans', 'DM Sans Fallback';\n  --font-sans: __variable_0d7163;\n  --font-heading: __variable_dd5b2f;\n}\n        "}]}],["$","body",null,{"className":"__variable_dd5b2f __variable_0d7163 antialiased","children":["$","$L2",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","div",null,{"className":"relative min-h-screen","children":[["$","$L5",null,{}],["$","$L6",null,{}],["$","main",null,{"children":[["$","$L7",null,{}],["$","$L8",null,{}],["$","$L9",null,{}],["$","$La",null,{}],["$","section",null,{"id":"fun-animation","className":"relative py-20 px-6","children":[["$","div",null,{"className":"max-w-6xl mx-auto flex justify-center","children":["$","div",null,{"className":"fun-scene","children":[["$","div",null,{"className":"fun-character naruto-wrapper","children":[["$","div",null,{"className":"pixel-body","children":[["$","div",null,{"className":"pixel-head naruto-hair"}],["$","div",null,{"className":"pixel-mid","children":[["$","div",null,{"className":"pixel-arm naruto-arm"}],["$","div",null,{"className":"pixel-torso naruto-torso"}],["$","div",null,{"className":"pixel-arm naruto-arm strike-arm"}]]}],["$","div",null,{"className":"pixel-legs","children":[["$","div",null,{"className":"pixel-leg naruto-leg"}],["$","div",null,{"className":"pixel-leg naruto-leg"}]]}]]}],["$","div",null,{"className":"rasengan","children":[["$","div",null,{"className":"wind-suction"}],["$","div",null,{"className":"wind-suction"}]]}]]}],["$","div",null,{"className":"fun-character sasuke-wrapper","children":[["$","div",null,{"className":"chidori","children":["$","div",null,{"className":"lightning-sparks"}]}],["$","div",null,{"className":"pixel-body","children":[["$","div",null,{"className":"pixel-head sasuke-hair"}],["$","div",null,{"className":"pixel-mid","children":[["$","div",null,{"className":"pixel-arm sasuke-arm strike-arm"}],["$","div",null,{"className":"pixel-torso sasuke-torso"}],["$","div",null,{"className":"pixel-arm sasuke-arm"}]]}],["$","div",null,{"className":"pixel-legs","children":[["$","div",null,{"className":"pixel-leg sasuke-leg"}],["$","div",null,{"className":"pixel-leg sasuke-leg"}]]}]]}]]}],["$","div",null,{"className":"impact-flash"}]]}]}],["$","style",null,{"children":"$b"}]]}],"$Lc"]}],"$Ld"]}],null,"$Le"]}],{},null,false]},null,false],"$Lf",false]],"m":"$undefined","G":["$10",[]],"s":false,"S":true}
+11:I[5723,["852","static/chunks/852-16193f80ef1bec78.js","974","static/chunks/app/page-7469b49651e823f5.js"],"default"]
+12:I[2189,[],"OutletBoundary"]
+14:I[5224,[],"AsyncMetadataOutlet"]
+16:I[2189,[],"ViewportBoundary"]
+18:I[2189,[],"MetadataBoundary"]
+19:"$Sreact.suspense"
+c:["$","$L11",null,{}]
+d:["$","footer",null,{"className":"py-8 px-6 border-t border-border/50 bg-background/80 backdrop-blur-sm","children":["$","div",null,{"className":"max-w-6xl mx-auto text-center","children":["$","p",null,{"className":"text-muted-foreground","children":"© 2026 Poreddy Lokesh Reddy"}]}]}]
+e:["$","$L12",null,{"children":["$L13",["$","$L14",null,{"promise":"$@15"}]]}]
+f:["$","$1","h",{"children":[null,[["$","$L16",null,{"children":"$L17"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$L18",null,{"children":["$","div",null,{"hidden":true,"children":["$","$19",null,{"fallback":null,"children":"$L1a"}]}]}]]}]
+17:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+13:null
+15:{"metadata":[["$","title","0",{"children":"Poreddy Lokesh Reddy - Full Stack Developer"}],["$","meta","1",{"name":"description","content":"Full Stack Developer specializing in AI, digital twins, and innovative solutions."}],["$","meta","2",{"name":"generator","content":"PLR.app"}]],"error":null,"digest":"$undefined"}
+1a:"$15:metadata"
